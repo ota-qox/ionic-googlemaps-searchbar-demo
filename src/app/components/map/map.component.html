@@ -1,3 +1,7 @@
 <div id="map" *ngIf="apiLoaded | async">
-  <google-map [width]="mapWidth" [height]="mapHeight"></google-map>
+  <google-map
+    [width]="mapWidth"
+    [height]="mapHeight"
+    (mapDragstart)="mapDragstart()">
+  </google-map>
 </div>

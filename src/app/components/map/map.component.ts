@@ -28,4 +28,14 @@ export class MapComponent implements OnInit {
   }
 
   ngOnInit() {}
+
+  mapDragstart() {
+    this.clearFocus();
+  }
+
+  clearFocus() {
+    if (document.activeElement instanceof HTMLElement) {
+      document.activeElement.blur();
+    }
+  }
 }
